@@ -1,79 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abubakar Sadiq | BSCS Student Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f8;
-            color: #333;
-        }
-        header {
-            background-color: #1f2937;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        nav {
-            background-color: #111827;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #1f2937;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .skills ul {
-            list-style: square;
-            padding-left: 20px;
-        }
-        .project {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: #1f2937;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abubakar Sadiq | Portfolio</title>
+
+<style>
+:root {
+    --primary:#2563eb;
+    --dark:#1f2937;
+    --light:#f9fafb;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color:#333;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    animation: fadeDown 1s;
+}
+
+header h1 {
+    font-size:38px;
+}
+
+header p {
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* NAV */
+nav {
+    background: var(--dark);
+    text-align:center;
+    padding:12px;
+    position: sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a {
+    color:white;
+    margin:0 12px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover {
+    color:#60a5fa;
+}
+
+/* SECTIONS */
+section {
+    max-width:1000px;
+    margin:auto;
+    padding:50px 20px;
+    animation: fadeUp 1s;
+}
+
+h2 {
+    color:var(--dark);
+    border-bottom:3px solid var(--primary);
+    display:inline-block;
+    padding-bottom:6px;
+    margin-bottom:20px;
+}
+
+/* PROFILE */
+.profile-pic {
+    display:block;
+    margin:20px auto;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:5px solid var(--primary);
+    object-fit:cover;
+}
+
+/* BUTTON */
+.btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 22px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover {
+    background:#1e40af;
+    transform:scale(1.05);
+}
+
+/* SKILLS */
+.skills ul {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:10px;
+    list-style:square;
+    padding-left:20px;
+}
+
+/* PROJECTS */
+.project {
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project:hover {
+    transform:translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(30px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeDown {
+    from {opacity:0; transform:translateY(-30px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    header h1 {font-size:28px;}
+    nav a {display:block; margin:8px 0;}
+}
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>Abubakar Sadiq</h1>
-    <p>BS Computer Science Student | Beginner Programmer</p>
+    <p>BS Computer Science Student | Aspiring Software Developer</p>
+    <a href="CV.pdf" class="btn" download>Download CV</a>
 </header>
 
 <nav>
@@ -85,68 +176,66 @@
 </nav>
 
 <section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a Bachelor of Computer Science (BSCS) student with a passion for learning programming and technology.
-        I am currently focusing on building strong fundamentals in C++ and problem-solving, with the goal of becoming
-        a professional software developer.
-    </p>
+<h2>About Me</h2>
+<img src="profile.jpg" class="profile-pic">
+<p>
+I am a Bachelor of Computer Science (BSCS) student passionate about programming and technology.
+I am learning C++ and building strong fundamentals to become a professional software developer.
+</p>
 </section>
 
 <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>C++ Programming (Basics)</li>
-        <li>If-Else Conditions & Loops</li>
-        <li>Arrays & Functions</li>
-        <li>Basic Problem Solving</li>
-        <li>MS Word & PowerPoint</li>
-        <li>Beginner Knowledge of AI & Technology</li>
-    </ul>
+<h2>Skills</h2>
+<ul>
+<li>C++ Programming (Basics)</li>
+<li>HTML & CSS</li>
+<li>If-Else, Loops</li>
+<li>Arrays & Functions</li>
+<li>Git & GitHub</li>
+<li>Problem Solving</li>
+</ul>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+<h2>Projects</h2>
 
-    <div class="project">
-        <h3>Student Grade Calculator</h3>
-        <p>A C++ program that calculates student grades based on marks.</p>
-        <strong>Technology:</strong> C++
-    </div>
+<div class="project">
+<h3>Student Grade Calculator</h3>
+<p>Calculates student grades based on marks.</p>
+<strong>Technology:</strong> C++
+</div>
 
-    <div class="project">
-        <h3>Vowel & Consonant Checker</h3>
-        <p>Checks whether an entered character is a vowel or consonant.</p>
-        <strong>Technology:</strong> C++
-    </div>
+<div class="project">
+<h3>Vowel & Consonant Checker</h3>
+<p>Checks vowel or consonant using conditions.</p>
+<strong>Technology:</strong> C++
+</div>
 
-    <div class="project">
-        <h3>Age Eligibility Checker</h3>
-        <p>Determines eligibility based on age input.</p>
-        <strong>Technology:</strong> C++
-    </div>
+<div class="project">
+<h3>Age Eligibility Checker</h3>
+<p>Checks eligibility based on age.</p>
+<strong>Technology:</strong> C++
+</div>
 
 </section>
 
 <section id="education">
-    <h2>Education</h2>
-    <img src="profile.jpg" alt="Profile Picture" width="200">
-
-    <p>
-        <strong>Bachelor of Computer Science (BSCS)</strong><br>
-        University Malakand University<br>
-        Status: Currently Enrolled
-    </p>
+<h2>Education</h2>
+<p>
+<strong>Bachelor of Computer Science (BSCS)</strong><br>
+University of Malakand<br>
+Currently Enrolled
+</p>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: abubakarsadiqedu.pk@gmail.com</p>
-    <p>GitHub: https://github.com/abubakar7243</p>
+<h2>Contact</h2>
+<p>Email: abubakarsadiqedu.pk@gmail.com</p>
+<p>GitHub: <a href="https://github.com/abubakar7243" target="_blank">github.com/abubakar7243</a></p>
 </section>
 
 <footer>
-    <p>© 2025 Abubakar Sadiq | Student Portfolio</p>
+<p>© 2025 Abubakar Sadiq | Portfolio</p>
 </footer>
 
 </body>
