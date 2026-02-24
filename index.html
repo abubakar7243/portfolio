@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abubakar Sadiq | Portfolio</title>
+  <title>Abubakar Sadiq | Portfolio & Affiliate Expert</title>
 
   <style>
     :root {
       --primary: #2563eb;
+      --amazon-gold: #FF9900;
       --dark: #0f172a;
       --light: #f8fafc;
     }
@@ -43,14 +44,8 @@
       animation: fadeIn 1.2s ease-in-out;
     }
 
-    header h1 {
-      font-size: 36px;
-    }
-
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
-    }
+    header h1 { font-size: 36px; }
+    header p { font-size: 18px; margin-top: 10px; }
 
     nav {
       background: var(--dark);
@@ -68,9 +63,7 @@
       font-weight: bold;
     }
 
-    nav a:hover {
-      color: #93c5fd;
-    }
+    nav a:hover { color: #93c5fd; }
 
     section {
       max-width: 900px;
@@ -86,23 +79,26 @@
       padding-bottom: 5px;
     }
 
-    .skills ul {
-      list-style: square;
-      padding-left: 20px;
-    }
-
-    .project {
+    /* Book Section Styles */
+    .book-showcase {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 15px 0;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      padding: 30px;
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-left: 8px solid var(--amazon-gold);
     }
 
-    .project:hover {
-      transform: translateY(-5px);
+    .book-img {
+      width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+
+    .book-info { flex: 1; min-width: 250px; }
 
     .btn {
       display: inline-block;
@@ -115,9 +111,12 @@
       font-weight: bold;
     }
 
-    .btn:hover {
-      background: #1d4ed8;
+    .btn-amazon {
+      background: var(--amazon-gold);
+      color: #111;
     }
+
+    .btn-amazon:hover { background: #e68a00; }
 
     footer {
       background: var(--dark);
@@ -131,10 +130,9 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* Mobile Responsive */
     @media (max-width: 600px) {
+      .book-showcase { flex-direction: column; text-align: center; }
       header h1 { font-size: 28px; }
-      nav a { display: inline-block; margin: 8px; }
     }
   </style>
 </head>
@@ -142,75 +140,67 @@
 <body>
 
   <header>
-    <img src="profile.jpg" alt="Profile Picture" />
+    <img src="profile.jpg" alt="Abubakar Sadiq" />
     <h1>Abubakar Sadiq</h1>
-    <p>BS Computer Science Student | Beginner Programmer</p>
+    <p>BSCS Student | Amazon Affiliate Marketing Expert</p>
     <a href="cv.pdf" class="btn" download>Download CV</a>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#recommendations">Books</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a BS Computer Science student passionate about programming and technology.
-      Currently learning C++ fundamentals, problem solving, and software development.
+      I am a Computer Science student at the University of Malakand. Alongside my degree, 
+      I specialize in <strong>Amazon Affiliate Marketing</strong>, helping people build 
+      passive income empires through strategic content and technology.
     </p>
   </section>
 
-  <section id="skills" class="skills">
+  <section id="recommendations">
+    <h2>Build Your Passive Income Empire</h2>
+    <div class="book-showcase">
+      <img src="https://m.media-amazon.com/images/I/71R2oI-S8XL.jpg" alt="Amazon Affiliate Book" class="book-img">
+      <div class="book-info">
+        <h3>Amazon Associates Affiliate Program</h3>
+        <p>Learn the exact steps to build a profitable online business. This guide covers niche selection, website building, and scaling your income.</p>
+        <a href="APNA_AMAZON_LINK_HERE" target="_blank" class="btn btn-amazon">View Price on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
+      <li>Affiliate Marketing & Pinterest SEO</li>
       <li>C++ Programming (Basics)</li>
-      <li>If-Else, Loops, Arrays</li>
-      <li>Problem Solving</li>
+      <li>Problem Solving & Web Development</li>
       <li>MS Word & PowerPoint</li>
-      <li>Basic Web Development</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Student Grade Calculator</h3>
-      <p>C++ program to calculate grades based on marks.</p>
+    <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      <h3>Portfolio & Book Store</h3>
+      <p>A responsive web project designed to bridge the gap between affiliate marketing and web technology.</p>
     </div>
-
-    <div class="project">
-      <h3>Vowel & Consonant Checker</h3>
-      <p>Checks whether input character is vowel or consonant.</p>
-    </div>
-
-    <div class="project">
-      <h3>Age Eligibility Checker</h3>
-      <p>Checks eligibility based on age input.</p>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <p>
-      <strong>Bachelor of Computer Science (BSCS)</strong><br />
-      University of Malakand<br />
-      Status: Currently Enrolled
-    </p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: abubakarsadiqedu.pk@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/abubakar7243">github.com/abubakar7243</a></p>
+    <p>Pinterest: <a href="https://pinterest.com/AbubakarAffiliate">AbubakarAffiliate</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Abubakar Sadiq | Portfolio Website</p>
+    <p>© 2026 Abubakar Sadiq | Build with Passion</p>
   </footer>
 
 </body>
